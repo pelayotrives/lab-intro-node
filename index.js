@@ -5,12 +5,12 @@ class SortedList {
   }
 
   add(item) {
-    for (let i = 0; i <= this.items.length - 1; i++) {
-      if (item > this.items[i]) {
-        this.items.splice(i, 0, item);
-        break;
-      }
-    }
+    this.items.push(item)
+    this.length=this.items.length;
+    
+    this.items.sort((a, b)=>{
+      return a-b
+    })
   }
 
   get(pos) {}
